@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Road game</title>
+
+    <link rel = "stylesheet" href = "styles.css">
+    <script src="main.js" defer>
+    </script>
+
+  </head>
+  <body>
+    <div class="container-row">
+      
+      <img id="left-arrow" hidden width="60" height="80" src="images/left-arrow.png">
+      <div style="flex:1"></div>
+      <div class="container">
+    
+        <canvas width="560" height="360" id = "canvas" class="game-area">
+        </canvas>
+        <div hidden id="paused" class="overlay">
+          <p>Игра остановлена</p>
+          <p>Нажмите пробел, чтобы продолжить</p>
+        </div>
+        <div hidden id="lost" class="overlay">
+          <p>Авария ((</p>
+        </div>
+        <div hidden id="won" class="overlay">
+          <p>Вы выиграли ))</p>
+        </div>
+
+      </div>
+      <div style="flex:1"></div>
+      <img id="right-arrow" hidden width="60" height="80" src="images/right-arrow.png">
+    </div>
+
+    <div id="manual" hidden>
+      <p>Клавиатура:</p>
+      <p>&#8592 &#8594 - перестроиться в другую полосу</p>
+      <p>ESC - пауза</p>
+      <p>Пробел - продолжить</p>
+    </div>
+
+    <canvas width="600" height="360" id = "canvas-tech" hidden>
+      
+    </canvas>
+
+    <div id="horizontal-alert" hidden>
+        Пожалуйста, поверните устройство горизонтально
+    </div>
+  </body>
+</html>
